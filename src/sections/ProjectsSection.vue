@@ -51,29 +51,31 @@ function truncate(text, max = 80) {
             class="project-details"
             :class="{ open: expandedIndex === index }"
           >
-            <div v-if="project.highlights && project.highlights.length" class="project-highlights">
-              <h4>Highlights</h4>
-              <ul>
-                <li v-for="(h, i) in project.highlights" :key="i">{{ h }}</li>
-              </ul>
-            </div>
+            <div class="project-details-inner">
+              <div v-if="project.highlights && project.highlights.length" class="project-highlights">
+                <h4>Highlights</h4>
+                <ul>
+                  <li v-for="(h, i) in project.highlights" :key="i">{{ h }}</li>
+                </ul>
+              </div>
 
-            <div class="project-tech">
-              <TagBadge v-for="t in project.tech" :key="t" :label="t" />
-            </div>
+              <div class="project-tech">
+                <TagBadge v-for="t in project.tech" :key="t" :label="t" />
+              </div>
 
-            <div class="project-links" v-if="project.links && project.links.length">
-              <a
-                v-for="link in project.links"
-                :key="link.label"
-                :href="link.url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-                @click.stop
-              >
-                {{ link.label }}
-              </a>
+              <div class="project-links" v-if="project.links && project.links.length">
+                <a
+                  v-for="link in project.links"
+                  :key="link.label"
+                  :href="link.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  @click.stop
+                >
+                  {{ link.label }}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -166,7 +168,7 @@ function truncate(text, max = 80) {
   grid-template-rows: 1fr;
 }
 
-.project-details > * {
+.project-details-inner {
   overflow: hidden;
 }
 
