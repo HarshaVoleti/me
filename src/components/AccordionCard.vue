@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -7,9 +7,23 @@ const props = defineProps({
 });
 
 const isOpen = ref(false);
+const bodyRef = ref(null);
+const bodyHeight = ref("0px");
 
-function toggle() {
-  isOpen.value = !isOpen.value;
+async function toggle() {
+  if (!isOpen.value) {
+    isOpen.value = true;
+    await nextTick();
+    bodyHeight.value = bodyRef.value.scrollHeight + "px";
+  } else {
+    bodyHeight.value = bodyRef.value.scrollHeight + "px";
+    requestAnimationFrame(() => {
+      bodyHeight.value = "0px";
+      setTimeout(() => {
+        isOpen.value = false;
+      }, 250);
+    });
+  }
 }
 </script>
 
@@ -20,10 +34,16 @@ function toggle() {
         <strong>{{ title }}</strong>
         <span v-if="subtitle" class="accordion-subtitle">{{ subtitle }}</span>
       </div>
-      <span class="accordion-icon">{{ isOpen ? "−" : "+" }}</span>
+      <span class="accordion-icon" :class="{ rotated: isOpen }">+</span>
     </button>
-    <div class="accordion-body" v-show="isOpen">
-      <slot />
+    <div
+      ref="bodyRef"
+      class="accordion-body-wrapper"
+      :style="{ maxHeight: isOpen ? bodyHeight : '0px' }"
+    >
+      <div class="accordion-body">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -54,6 +74,7 @@ function toggle() {
   font-family: inherit;
   font-size: 1rem;
   gap: 1rem;
+  transition: background 0.2s;
 }
 
 .accordion-title {
@@ -72,6 +93,17 @@ function toggle() {
   font-size: 1.25rem;
   flex-shrink: 0;
   color: var(--color-text-secondary);
+  transition: transform 0.25s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(45deg);
+}
+
+.accordion-body-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
 }
 
 .accordion-body {

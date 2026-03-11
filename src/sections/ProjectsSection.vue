@@ -58,11 +58,13 @@ import { projects } from "../data/projects.js";
   border-radius: 6px;
   overflow: hidden;
   background: var(--color-card);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
   border-color: var(--color-border-hover);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .project-image {
@@ -109,12 +111,13 @@ import { projects } from "../data/projects.js";
   border-radius: 4px;
   text-decoration: none;
   color: var(--color-text);
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .project-link:hover {
   border-color: var(--color-border-hover);
   background: var(--color-bg);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 640px) {

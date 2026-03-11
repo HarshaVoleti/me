@@ -1,11 +1,29 @@
 <script setup>
+import { ref, onMounted } from "vue";
+
 defineProps({
   title: { type: String, required: true },
+});
+
+const sectionRef = ref(null);
+const isVisible = ref(false);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true;
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.1 }
+  );
+  if (sectionRef.value) observer.observe(sectionRef.value);
 });
 </script>
 
 <template>
-  <section class="section">
+  <section ref="sectionRef" class="section fade-section" :class="{ visible: isVisible }">
     <h2 class="section-title">{{ title }}</h2>
     <slot />
   </section>

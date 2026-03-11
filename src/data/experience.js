@@ -1,53 +1,38 @@
 export const experience = [
   {
-    company: "Tech Corp",
-    role: "Senior Software Engineer",
-    duration: "2023 – Present",
+    company: "DeltaX",
+    role: "Associate Product Engineer",
+    duration: "Feb 2024 – Present",
     description:
-      "Leading frontend architecture and building internal tools for developer productivity.",
-    technologies: ["Vue.js", "TypeScript", "GraphQL", "AWS"],
+      "Working on full-stack product features across mobile and web platforms, focusing on performance optimization, scalable backend systems, and improved user experiences.",
+    technologies: ["Flutter", "Dart", ".NET", "Vue.js", "REST APIs", "SQL Server"],
     responsibilities: [
-      "Architected the frontend platform serving 50k+ users",
-      "Mentored a team of 4 junior developers",
-      "Established code review and testing standards",
+      "Developed and shipped full-stack product features using Flutter, .NET APIs, and Vue.js",
+      "Implemented end-to-end location tracking systems",
+      "Revamped Users and Teams modules with improved state management architecture",
+      "Implemented app localization supporting Hindi and English",
+      "Built background job processing systems for automation workflows",
     ],
     achievements: [
-      "Reduced page load time by 40% through code splitting",
-      "Shipped a design system used across 3 product teams",
+      "Optimized a complex stored procedure reducing response time from 6 seconds to 0.28 seconds",
+      "Enabled scalable campaign automation using macro-based email and WhatsApp templates",
+      "Improved reliability and maintainability of product modules",
     ],
   },
   {
-    company: "Startup Inc.",
-    role: "Full Stack Developer",
-    duration: "2021 – 2023",
+    company: "Bewingz",
+    role: "Mobile App Developer",
+    duration: "Feb 2023 – Feb 2024",
     description:
-      "Built and maintained customer-facing web and mobile applications from the ground up.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
+      "Developed a mobile platform for bike monitoring and maintenance tracking using Flutter and Firebase.",
+    technologies: ["Flutter", "Firebase", "Dart"],
     responsibilities: [
-      "Developed REST APIs and integrated third-party services",
-      "Built responsive UI components with React",
-      "Managed CI/CD pipelines and deployments",
+      "Built the mobile application from scratch using Flutter",
+      "Integrated Firebase backend services",
+      "Implemented bike tracking and maintenance monitoring features",
     ],
     achievements: [
-      "Launched MVP in 3 months, acquired 1k users in first quarter",
-      "Implemented real-time notifications reducing support tickets by 25%",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Software Developer",
-    duration: "2019 – 2021",
-    description:
-      "Delivered web solutions for small businesses and startups as an independent contractor.",
-    technologies: ["JavaScript", "Firebase", "Flutter", "Figma"],
-    responsibilities: [
-      "Gathered requirements and delivered end-to-end solutions",
-      "Designed and built mobile apps with Flutter",
-      "Set up hosting and deployment infrastructure",
-    ],
-    achievements: [
-      "Completed 15+ projects with a 100% client satisfaction rate",
-      "Built an e-commerce app generating $50k+ in first-year sales for a client",
+      "Delivered a production-ready mobile application used for monitoring vehicle maintenance",
     ],
   },
 ];

@@ -29,6 +29,13 @@ import { skills } from "../data/skills.js";
   border: 1px solid var(--color-border);
   border-radius: 6px;
   background: var(--color-card);
+  transition: border-color 0.2s, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-group:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .skill-category {

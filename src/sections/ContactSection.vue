@@ -117,11 +117,12 @@ function handleSubmit() {
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .submit-btn:hover {
   opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 .success-msg {

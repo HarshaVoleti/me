@@ -1,9 +1,18 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import { profile } from "../data/profile.js";
+
+const isVisible = ref(false);
+
+onMounted(() => {
+  requestAnimationFrame(() => {
+    isVisible.value = true;
+  });
+});
 </script>
 
 <template>
-  <section id="hero" class="hero">
+  <section id="hero" class="hero fade-section" :class="{ visible: isVisible }">
     <img :src="profile.image" :alt="profile.name" class="hero-image" />
     <h1 class="hero-name">{{ profile.name }}</h1>
     <p class="hero-tagline">{{ profile.tagline }}</p>
@@ -34,6 +43,13 @@ import { profile } from "../data/profile.js";
       >
         Email
       </a>
+    </div>
+
+    <div class="hero-stats">
+      <div v-for="stat in profile.stats" :key="stat.label" class="stat-item">
+        <span class="stat-value">{{ stat.value }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
     </div>
   </section>
 </template>
@@ -91,11 +107,47 @@ import { profile } from "../data/profile.js";
   border-radius: 6px;
   color: var(--color-text);
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .hero-link:hover {
   border-color: var(--color-border-hover);
   background: var(--color-card);
+  transform: translateY(-1px);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    gap: 1.5rem;
+  }
 }
 </style>

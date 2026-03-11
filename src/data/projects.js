@@ -1,37 +1,28 @@
 export const projects = [
   {
-    title: "DevDash",
+    title: "LinkBox",
     description:
-      "A developer dashboard that aggregates GitHub activity, CI/CD status, and project metrics into a single view.",
-    tech: ["Vue.js", "Node.js", "GitHub API", "Chart.js"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=DevDash",
-    github: "https://github.com/yourusername/devdash",
-    live: "https://devdash.example.com",
-  },
-  {
-    title: "TaskFlow",
-    description:
-      "A minimal task management app with drag-and-drop boards, real-time sync, and keyboard shortcuts.",
-    tech: ["React", "Firebase", "Tailwind CSS"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=TaskFlow",
-    github: "https://github.com/yourusername/taskflow",
+      "A link management and collaboration platform that allows users to organize, sync, and share important links across devices in real time.",
+    tech: ["Flutter", "Firebase", "Firestore", "FCM"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=LinkBox",
+    github: "",
     live: "",
   },
   {
-    title: "MarkdownPad",
+    title: "RateMe",
     description:
-      "A clean, distraction-free markdown editor with live preview and local file system support.",
-    tech: ["TypeScript", "Electron", "CodeMirror"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=MarkdownPad",
-    github: "https://github.com/yourusername/markdownpad",
-    live: "https://markdownpad.example.com",
+      "A platform where users can rate and review each other, designed as a social reputation system that can evolve into a social credibility platform.",
+    tech: ["Flutter", "Firebase"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=RateMe",
+    github: "",
+    live: "",
   },
   {
-    title: "API Monitor",
+    title: "Bike Maintenance Tracker",
     description:
-      "A lightweight uptime monitoring tool that pings endpoints and sends alerts via email and Slack.",
-    tech: ["Python", "FastAPI", "PostgreSQL", "Docker"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=API+Monitor",
+      "A mobile application for tracking bike status, maintenance schedules, and service history.",
+    tech: ["Flutter", "Firebase"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Bike+Maintenance+App",
     github: "",
     live: "",
   },

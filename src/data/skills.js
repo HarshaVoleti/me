@@ -1,22 +1,22 @@
 export const skills = [
   {
     category: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "Dart", "SQL"],
+    items: ["C#", "JavaScript", "Python", "Dart", "Java", "C", "SQL"],
   },
   {
-    category: "Frameworks",
-    items: ["Vue.js", "React", "Flutter", "Node.js", "Express"],
+    category: "Frameworks & Libraries",
+    items: [".NET", ".NET Core", "Flutter", "Vue.js", "SwiftUI", "Bootstrap", "SpecFlow"],
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "Firebase", "Redis"],
+    items: ["SQL Server", "MySQL", "Redis", "Firebase", "Dapper"],
+  },
+  {
+    category: "Background Processing",
+    items: ["Hangfire", "Quartz", ".NET Background Services"],
   },
   {
     category: "Tools",
-    items: ["Git", "Docker", "VS Code", "Figma", "Postman"],
-  },
-  {
-    category: "Cloud / DevOps",
-    items: ["AWS", "GCP", "CI/CD", "Nginx", "Linux"],
+    items: ["Git", "Bitbucket", "Postman", "Jenkins"],
   },
 ];
