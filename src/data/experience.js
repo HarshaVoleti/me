@@ -1,5 +1,26 @@
 export const experience = [
   {
+    company: "Mecorp",
+    role: "Co-Founder & CTO",
+    duration: "2023 – Present",
+    description:
+      "Building and launching consumer-focused digital products with a strong emphasis on performance, offline-first architecture, and scalable mobile experiences.",
+    technologies: ["Flutter", "Firebase", "Local-first Architecture", "Isar/Local Storage", "FCM"],
+    responsibilities: [
+      "Architecting and building mobile products end-to-end from idea to deployment",
+      "Designed and implemented a local-first architecture to ensure fast, reliable app performance even with unstable network connectivity",
+      "Developing scalable mobile and backend features including authentication, data sync, and push notifications",
+      "Leading product architecture, feature design, and technical decisions",
+      "Managing product roadmap and feature prioritization",
+    ],
+    achievements: [
+      "Built and launched LinkBox, a link organization and sharing platform that allows users to create collections, share folders, and track engagement",
+      "Implemented real-time sync and notifications using Firebase Firestore and Firebase Cloud Messaging",
+      "Designed folder-based link management with customizable icons, privacy controls, and creator sharing features",
+      "Currently building RateMe, a social reputation platform where users can rate and review each other",
+    ],
+  },
+  {
     company: "DeltaX",
     role: "Associate Product Engineer",
     duration: "Feb 2024 – Present",
