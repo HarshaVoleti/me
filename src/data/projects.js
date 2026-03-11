@@ -5,7 +5,11 @@ export const projects = [
       "A creator-focused platform that lets users collect, organize, and share curated link collections. LinkBox enables people to build folders of products, tools, videos, and resources, share them publicly, and track engagement through real-time analytics.",
     tech: ["Flutter", "Firebase", "Firestore", "Firebase Cloud Messaging", "Isar"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=LinkBox",
-    links: [],
+    links: [
+      { label: "Website", url: "https://linkbox.store/" },
+      { label: "iOS", url: "https://apps.apple.com/in/app/linkbox-create-collect-share/id6737998565" },
+      { label: "Android", url: "https://play.google.com/store/apps/details?id=apps.me.linkbox&hl=en_IN" },
+    ],
     highlights: [
       "Built a cross-platform mobile app enabling users to create organized link collections and share them publicly",
       "Implemented real-time sync using Firebase Firestore streams so collections stay updated across devices",
@@ -21,7 +25,12 @@ export const projects = [
       "A CRM platform developed at DeltaX designed to manage leads, customer relationships, and business interactions across both B2B and B2C workflows. I contributed to backend development by building and maintaining REST APIs and database logic that power the system, supporting Flutter-based mobile applications and Vue.js web clients. The platform is deployed using containerized infrastructure.",
     tech: ["Flutter", "Vue.js", ".NET", "SQL Server", "REST APIs", "Docker", "Kubernetes", "Redis"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Birdigo",
-    links: [],
+    links: [
+      { label: "Website", url: "https://birdigo.com/" },
+      { label: "Web App", url: "https://app.birdigo.com/" },
+      { label: "iOS", url: "https://apps.apple.com/in/app/birdigo/id6450288826" },
+      { label: "Android", url: "https://play.google.com/store/search?q=birdigo&c=apps&hl=en_IN" },
+    ],
   },
   {
     title: "RateMe",
