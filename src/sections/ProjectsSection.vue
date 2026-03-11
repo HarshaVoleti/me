@@ -95,6 +95,7 @@ function truncate(text, max = 80) {
   overflow: hidden;
   background: var(--color-card);
   cursor: pointer;
+  align-self: start;
   transition: border-color 0.2s, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
