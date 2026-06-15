@@ -9,8 +9,8 @@ export const profile = {
     email: "mailharshavoleti@gmail.com",
   },
   stats: [
-    { value: "2+", label: "Years Product Development" },
-    { value: "5+", label: "Production Apps Built" },
+    { value: "3+", label: "Years Product Development" },
+    { value: "6+", label: "Production Apps Built" },
     { value: "Full-Stack", label: "& Mobile Engineer" },
   ],
 };

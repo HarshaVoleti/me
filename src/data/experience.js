@@ -25,19 +25,23 @@ export const experience = [
     role: "Associate Product Engineer",
     duration: "Feb 2024 – June 2026",
     description:
-      "Working on full-stack product features across mobile and web platforms, focusing on performance optimization, scalable backend systems, and improved user experiences.",
-    technologies: ["Flutter", "Dart", ".NET", "Vue.js", "REST APIs", "SQL Server"],
+      "Working on full-stack product features across mobile and web platforms, focusing on performance optimization, scalable backend systems, deployment infrastructure, and improved user experiences.",
+    technologies: ["Flutter", "Dart", ".NET", "Vue.js", "REST APIs", "SQL Server", "Docker", "Kubernetes", "DragonflyDB", "Jenkins"],
     responsibilities: [
       "Developed and shipped full-stack product features using Flutter, .NET APIs, and Vue.js",
       "Implemented end-to-end location tracking systems",
-      "Revamped Users and Teams modules with improved state management architecture",
+      "Applied Riverpod state management and scalable architecture patterns across multiple Flutter modules, revamping the Users and Teams modules",
+      "Developed local-first mobile application architecture, enabling responsive offline-first experiences with reliable synchronization",
       "Implemented app localization supporting Hindi and English",
       "Built background job processing systems for automation workflows",
+      "Built and maintained pre-production environments for multiple products using Docker, Kubernetes, and Jenkins CI/CD pipelines",
+      "Managed deployment pipelines, container image workflows, production rollouts, and rollback strategies",
     ],
     achievements: [
-      "Optimized a complex stored procedure reducing response time from 6 seconds to 0.28 seconds",
+      "Optimized a complex stored procedure querying 667K+ records, reducing response time from 6 seconds to 0.28 seconds",
+      "Implemented and rolled out a DragonflyDB cache migration, replacing Redis across multiple services to improve cache performance and infrastructure efficiency",
       "Enabled scalable campaign automation using macro-based email and WhatsApp templates",
-      "Improved reliability and maintainability of product modules",
+      "Took ownership of features from architecture and development through deployment and production support",
     ],
   },
   {
@@ -45,15 +49,16 @@ export const experience = [
     role: "Mobile App Developer",
     duration: "Feb 2023 – Feb 2024",
     description:
-      "Developed a mobile platform for bike monitoring and maintenance tracking using Flutter and Firebase.",
-    technologies: ["Flutter", "Firebase", "Dart"],
+      "Independently designed and developed a mobile platform for bike tracking and maintenance scheduling using Flutter and Firebase.",
+    technologies: ["Flutter", "Dart", "Firebase", "Firestore", "Realtime Database", "Google Location Services", "Provider", "Firebase Cloud Messaging"],
     responsibilities: [
-      "Built the mobile application from scratch using Flutter",
-      "Integrated Firebase backend services",
-      "Implemented bike tracking and maintenance monitoring features",
+      "Independently designed and built the mobile app from scratch using Flutter",
+      "Implemented Google Location Services for geotagging and live location updates",
+      "Used Realtime Database / Firestore with Provider state management for live data sync",
+      "Integrated Firebase Cloud Messaging for maintenance alerts and notifications",
     ],
     achievements: [
-      "Delivered a production-ready mobile application used for monitoring vehicle maintenance",
+      "Delivered a production-ready mobile application with a scalable, production-ready architecture for tracking bike status, maintenance schedules, and service history",
     ],
   },
 ];

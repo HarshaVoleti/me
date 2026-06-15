@@ -5,18 +5,22 @@ export const skills = [
   },
   {
     category: "Frameworks & Libraries",
-    items: [".NET", ".NET Core", "Flutter", "Vue.js", "SwiftUI", "Bootstrap", "SpecFlow"],
+    items: [".NET", ".NET Core", "ASP.NET", "Flutter", "Vue.js", "SwiftUI", "Bootstrap"],
   },
   {
-    category: "Databases",
-    items: ["SQL Server", "MySQL", "Redis", "Firebase", "Dapper"],
+    category: "Cloud & DevOps",
+    items: ["Docker", "Kubernetes", "Jenkins", "GitLab CI/CD", "Google Cloud Platform (GCP)", "Firebase"],
   },
   {
-    category: "Background Processing",
-    items: ["Hangfire", "Quartz", ".NET Background Services"],
+    category: "Databases & Caching",
+    items: ["SQL Server", "MySQL", "Redis", "DragonflyDB", "Firestore", "Dapper"],
   },
   {
-    category: "Tools",
-    items: ["Git", "Bitbucket", "Postman", "Jenkins"],
+    category: "Architecture & Backend",
+    items: ["REST APIs", "Microservices", "Local-First Architecture", "State Management", "Scalable Systems", "Hangfire", "Quartz"],
+  },
+  {
+    category: "Tools & Testing",
+    items: ["Git", "GitHub", "Bitbucket", "Postman", "SpecFlow", "NUnit", "XUnit", "Agile/Scrum"],
   },
 ];

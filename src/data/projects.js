@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "LinkBox",
     description:
-      "A creator-focused platform that lets users collect, organize, and share curated link collections. LinkBox enables people to build folders of products, tools, videos, and resources, share them publicly, and track engagement through real-time analytics.",
+      "A creator-focused platform that lets users collect, organize, and share curated link collections. Built from scratch using Flutter and grown to 2000+ users across Android and iOS, with a production-grade offline-first architecture and real-time sync.",
     tech: ["Flutter", "Firebase", "Firestore", "Firebase Cloud Messaging", "Isar"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=LinkBox",
     links: [
@@ -11,12 +11,25 @@ export const projects = [
       { label: "Android", url: "https://play.google.com/store/apps/details?id=apps.me.linkbox&hl=en_IN" },
     ],
     highlights: [
-      "Built a cross-platform mobile app enabling users to create organized link collections and share them publicly",
-      "Implemented real-time sync using Firebase Firestore streams so collections stay updated across devices",
-      "Integrated Firebase Cloud Messaging to notify followers instantly when new links are added",
+      "Built and deployed a cross-platform productivity app from scratch, growing to 2000+ users across Android and iOS",
+      "Designed a production-grade offline-first / local-first architecture with scalable state management and local persistence for a responsive experience under unreliable networks",
+      "Implemented real-time sync using Firebase Firestore streams and push notifications via Firebase Cloud Messaging",
       "Designed folder systems with customizable icons, colors, and privacy controls (public & private folders)",
       "Implemented analytics features to track collection views, clicks, and follower engagement",
-      "Enabled creators to share collections across social platforms such as Instagram, Twitter, and link-in-bio pages",
+      "Owned the complete product lifecycle: architecture, development, deployment, release management, and iterative improvements",
+    ],
+  },
+  {
+    title: "Tomorrow: Plan Tonight",
+    description:
+      "A productivity and planning app for mapping out tomorrow the night before, currently in active closed testing across Android and iOS with 3000+ testers.",
+    tech: ["Flutter", "Firebase"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Tomorrow",
+    links: [],
+    highlights: [
+      "Built and deployed the app for cross-platform mobile, reaching 3000+ closed testing users and 50+ early access testers",
+      "Contributed across product engineering, deployment workflows, testing coordination, feature iteration, and user feedback analysis",
+      "Collaborated on product positioning and marketing initiatives, gaining hands-on exposure to startup growth and user acquisition strategies",
     ],
   },
   {
@@ -35,7 +48,7 @@ export const projects = [
   {
     title: "RateMe",
     description:
-      "A platform where users can rate and review each other, designed as a social reputation system that can evolve into a social credibility platform.",
+      "A social rating and review system focused on trust and transparency. Unlike social media, it lets users share constructive feedback on skills and character, evolving into a credibility-driven platform where reputation matters more than followers.",
     tech: ["Flutter", "Firebase-Cloud Firestore", "Firebase Authentication", "Firebase Cloud Messaging"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=RateMe",
     links: [],
