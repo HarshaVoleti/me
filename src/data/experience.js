@@ -23,7 +23,7 @@ export const experience = [
   {
     company: "DeltaX",
     role: "Associate Product Engineer",
-    duration: "Feb 2024 – Present",
+    duration: "Feb 2024 – June 2026",
     description:
       "Working on full-stack product features across mobile and web platforms, focusing on performance optimization, scalable backend systems, and improved user experiences.",
     technologies: ["Flutter", "Dart", ".NET", "Vue.js", "REST APIs", "SQL Server"],
