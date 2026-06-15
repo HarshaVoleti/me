@@ -49,33 +49,18 @@ export const projects = [
     links: [],
   },
   {
-    title: "Client Portfolio Website — Nikitha Pulineni",
+    title: "Client Portfolio Websites",
     description:
-      "Designed and developed a personal portfolio website for a client to showcase professional profile, skills, and work experience with a clean modern layout.",
+      "Designed and developed personal portfolio websites for freelance clients to showcase their professional profiles, skills, and work experience with clean, modern layouts.",
     tech: ["Vue.js", "HTML", "CSS", "Netlify"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Nikitha+Portfolio",
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Client+Portfolios",
     links: [
-      { label: "Website", url: "https://nikithapulineni.netlify.app/" },
+      { label: "Nikitha Pulineni", url: "https://nikithapulineni.netlify.app/" },
+      { label: "Pareena Sayyad", url: "https://pareenasayyad.netlify.app/" },
     ],
     highlights: [
-      "Designed a responsive portfolio layout optimized for desktop and mobile",
+      "Designed responsive portfolio layouts optimized for desktop and mobile",
       "Implemented smooth UI interactions and clean section-based navigation",
-      "Deployed and configured hosting using Netlify",
-      "Built as a custom portfolio solution tailored to client needs",
-    ],
-  },
-  {
-    title: "Client Portfolio Website — Pareena Sayyad",
-    description:
-      "Developed a professional portfolio website for a client to present projects, achievements, and professional background in a clear and engaging format.",
-    tech: ["Vue.js", "HTML", "CSS", "Netlify"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Pareena+Portfolio",
-    links: [
-      { label: "Website", url: "https://pareenasayyad.netlify.app/" },
-    ],
-    highlights: [
-      "Built a clean and modern portfolio interface focused on readability and usability",
-      "Implemented responsive layouts for multiple screen sizes",
       "Optimized website performance for fast loading",
       "Deployed and managed hosting through Netlify",
     ],
