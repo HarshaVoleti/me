@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { profile } from "../data/profile.js";
+import profilePhoto from "../assets/harsha_voleti.jpeg";
 
 const isVisible = ref(false);
 
@@ -13,11 +14,27 @@ onMounted(() => {
 
 <template>
   <section id="hero" class="hero fade-section" :class="{ visible: isVisible }">
-    <img :src="profile.image" :alt="profile.name" class="hero-image" />
+    <img :src="profilePhoto" :alt="profile.name" class="hero-image" />
     <h1 class="hero-name">{{ profile.name }}</h1>
     <p class="hero-tagline">{{ profile.tagline }}</p>
     <p class="hero-bio">{{ profile.bio }}</p>
+
     <div class="hero-links">
+      <a
+        v-if="profile.social.resume"
+        :href="profile.social.resume"
+        download
+        class="hero-link hero-link--primary"
+      >
+        Resume
+      </a>
+      <a
+        v-if="profile.social.email"
+        :href="'mailto:' + profile.social.email"
+        class="hero-link"
+      >
+        Email
+      </a>
       <a
         v-if="profile.social.github"
         :href="profile.social.github"
@@ -37,11 +54,13 @@ onMounted(() => {
         LinkedIn
       </a>
       <a
-        v-if="profile.social.email"
-        :href="'mailto:' + profile.social.email"
+        v-if="profile.social.topmate"
+        :href="profile.social.topmate"
+        target="_blank"
+        rel="noopener noreferrer"
         class="hero-link"
       >
-        Email
+        Top Mate
       </a>
     </div>
 
@@ -63,8 +82,8 @@ onMounted(() => {
 }
 
 .hero-image {
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   border: 2px solid var(--color-border);
   margin-bottom: 1.5rem;
@@ -80,23 +99,24 @@ onMounted(() => {
 
 .hero-tagline {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
   margin-bottom: 1rem;
+  letter-spacing: 0.01em;
 }
 
 .hero-bio {
   font-size: 1rem;
   color: var(--color-text-secondary);
-  max-width: 500px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
 }
 
 .hero-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
@@ -107,13 +127,25 @@ onMounted(() => {
   border-radius: 6px;
   color: var(--color-text);
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
 }
 
 .hero-link:hover {
   border-color: var(--color-border-hover);
   background: var(--color-card);
   transform: translateY(-1px);
+}
+
+.hero-link--primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+.hero-link--primary:hover {
+  opacity: 0.85;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 .hero-stats {
@@ -146,6 +178,10 @@ onMounted(() => {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
   .hero-stats {
     gap: 1.5rem;
   }

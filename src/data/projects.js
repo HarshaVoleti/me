@@ -1,41 +1,83 @@
 export const projects = [
   {
     title: "LinkBox",
+    category: "app",
+    featured: true,
     description:
-      "A creator-focused platform that lets users collect, organize, and share curated link collections. Built from scratch using Flutter and grown to 2000+ users across Android and iOS, with a production-grade offline-first architecture and real-time sync.",
-    tech: ["Flutter", "Firebase", "Firestore", "Firebase Cloud Messaging", "Isar"],
+      "Link organizer app — users build themed collections (tools, resources, products) and share them publicly. Built solo, from idea to both stores.",
+    tech: ["Flutter", "Dart", "Riverpod", "Firestore", "Isar", "Firebase Cloud Messaging"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=LinkBox",
     links: [
       { label: "Website", url: "https://linkbox.store/" },
-      { label: "iOS", url: "https://apps.apple.com/in/app/linkbox-create-collect-share/id6737998565" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=apps.me.linkbox&hl=en_IN" },
+      { label: "App Store", url: "https://apps.apple.com/in/app/linkbox-create-collect-share/id6737998565" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=apps.me.linkbox&hl=en_IN" },
     ],
     highlights: [
-      "Built and deployed a cross-platform productivity app from scratch, growing to 2000+ users across Android and iOS",
-      "Designed a production-grade offline-first / local-first architecture with scalable state management and local persistence for a responsive experience under unreliable networks",
-      "Implemented real-time sync using Firebase Firestore streams and push notifications via Firebase Cloud Messaging",
-      "Designed folder systems with customizable icons, colors, and privacy controls (public & private folders)",
-      "Implemented analytics features to track collection views, clicks, and follower engagement",
-      "Owned the complete product lifecycle: architecture, development, deployment, release management, and iterative improvements",
+      "3,000+ users across App Store and Play Store — sole developer, designer, and release manager",
+      "Offline-first local-first architecture: Isar for local persistence, Firestore for cloud sync — fully functional with no network connection",
+      "Riverpod entity stores for normalized state; zero unnecessary rebuilds on unrelated data changes",
+      "Firebase Cloud Messaging push re-engagement when followed collections receive new links",
+      "Owned the full lifecycle: UX, architecture, development, App Store / Play Store submission, and analytics",
     ],
   },
   {
     title: "Tomorrow: Plan Tonight",
+    category: "app",
+    featured: true,
     description:
-      "A productivity and planning app for mapping out tomorrow the night before, currently in active closed testing across Android and iOS with 3000+ testers.",
-    tech: ["Flutter", "Firebase"],
+      "Evening planning app — map out your next day the night before to wake up with clarity instead of friction. Solo-built, live on both stores.",
+    tech: ["Flutter", "Dart", "Firebase"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Tomorrow",
-    links: [],
+    links: [
+      // TODO: Add App Store link
+      // TODO: Add Play Store link
+    ],
     highlights: [
-      "Built and deployed the app for cross-platform mobile, reaching 3000+ closed testing users and 50+ early access testers",
-      "Contributed across product engineering, deployment workflows, testing coordination, feature iteration, and user feedback analysis",
-      "Collaborated on product positioning and marketing initiatives, gaining hands-on exposure to startup growth and user acquisition strategies",
+      "Solo-built and shipped to both App Store and Play Store",
+      "Built with Flutter from scratch, end to end",
+    ],
+  },
+  {
+    title: "Hanglet",
+    category: "client",
+    featured: true,
+    description:
+      "Client project — hangout coordination app. Responsible for full mobile architecture and implementation. Confidential internals; architecture described below.",
+    tech: ["Flutter", "Dart", "Riverpod", "Supabase", "PostgreSQL", "FCM", "pgvector"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Hanglet",
+    links: [
+      // TODO: Add Play Store link if public
+    ],
+    highlights: [
+      "Push notification architecture: FCM tokens, Supabase Edge Functions for triggers, pg_cron for scheduled batch delivery",
+      "Normalized Riverpod entity-store architecture across the full app — single source of truth for each domain entity",
+      "Face verification using pgvector similarity search on stored facial embeddings",
+      "Supabase RLS security audit across all tables; resolved policy gaps before Play Store submission",
+    ],
+  },
+  {
+    title: "devclean",
+    category: "tool",
+    featured: true,
+    description:
+      "Open-source zsh CLI for developer machine cleanup. Safety-tiered operations that let you reclaim disk space without accidentally nuking something important.",
+    tech: ["zsh", "Shell Scripting", "CLI"],
+    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=devclean",
+    links: [
+      // TODO: Add GitHub link (mac-dev-handbook repo)
+    ],
+    highlights: [
+      "Part of mac-dev-handbook — an opinionated toolkit for dev machine hygiene",
+      "Safety-tiered: dry-run by default, explicit confirmation required before any destructive operation",
+      "Targets common dev bloat: build caches, node_modules trees, Docker layer cache, Xcode DerivedData, Homebrew orphans",
     ],
   },
   {
     title: "Birdigo",
+    category: "work",
+    featured: false,
     description:
-      "A CRM platform developed at DeltaX designed to manage leads, customer relationships, and business interactions across both B2B and B2C workflows. I contributed to backend development by building and maintaining REST APIs and database logic that power the system, supporting Flutter-based mobile applications and Vue.js web clients. The platform is deployed using containerized infrastructure.",
+      "A CRM platform developed at DeltaX designed to manage leads, customer relationships, and business interactions across both B2B and B2C workflows. Contributed to backend development by building and maintaining REST APIs and database logic that power the system, supporting Flutter-based mobile applications and Vue.js web clients. Deployed using containerized infrastructure.",
     tech: ["Flutter", "Vue.js", ".NET", "SQL Server", "REST APIs", "Docker", "Kubernetes", "Redis"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Birdigo",
     links: [
@@ -47,22 +89,28 @@ export const projects = [
   },
   {
     title: "RateMe",
+    category: "app",
+    featured: false,
     description:
       "A social rating and review system focused on trust and transparency. Unlike social media, it lets users share constructive feedback on skills and character, evolving into a credibility-driven platform where reputation matters more than followers.",
-    tech: ["Flutter", "Firebase-Cloud Firestore", "Firebase Authentication", "Firebase Cloud Messaging"],
+    tech: ["Flutter", "Firebase", "Firestore", "Firebase Authentication", "Firebase Cloud Messaging"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=RateMe",
     links: [],
   },
   {
     title: "Bewingz",
+    category: "work",
+    featured: false,
     description:
       "A mobile application for tracking bike status, maintenance schedules, and service history.",
-    tech: ["Flutter", "Firebase-Cloud Firestore", "Firebase Authentication", "Firebase Cloud Messaging", "Firebase Storage", "Firebase Real-time Database"],
+    tech: ["Flutter", "Firebase", "Firestore", "Firebase Authentication", "Firebase Cloud Messaging", "Firebase Storage", "Realtime Database"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Bewingz",
     links: [],
   },
   {
     title: "Client Portfolio Websites",
+    category: "client",
+    featured: false,
     description:
       "Designed and developed personal portfolio websites for freelance clients to showcase their professional profiles, skills, and work experience with clean, modern layouts.",
     tech: ["Vue.js", "HTML", "CSS", "Netlify"],
@@ -80,6 +128,8 @@ export const projects = [
   },
   {
     title: "Star Wars Themed Portfolio",
+    category: "experiment",
+    featured: false,
     description:
       "A creative animated personal portfolio inspired by the Star Wars universe. Designed as an experimental UI project combining animations, themed visuals, and interactive effects.",
     tech: ["Vue 3", "JavaScript", "CSS Animations"],

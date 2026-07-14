@@ -1,9 +1,24 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { navLinks } from "../data/navigation.js";
+import { showInsights } from "../utils/adminState.js";
 
 const isDark = ref(false);
 const mobileOpen = ref(false);
+
+// Secret trigger: click the brand 5 times within 3 seconds
+const brandClicks = ref(0);
+let brandTimer = null;
+function onBrandClick() {
+  brandClicks.value += 1;
+  clearTimeout(brandTimer);
+  if (brandClicks.value >= 5) {
+    brandClicks.value = 0;
+    showInsights.value = true;
+    return;
+  }
+  brandTimer = setTimeout(() => { brandClicks.value = 0; }, 3000);
+}
 
 function toggleTheme() {
   isDark.value = !isDark.value;
@@ -32,7 +47,7 @@ onMounted(() => {
 <template>
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="#hero" class="navbar-brand">&lt;Dev /&gt;</a>
+      <a href="#hero" class="navbar-brand" @click.prevent="onBrandClick">HV.</a>
 
       <button
         class="mobile-toggle"

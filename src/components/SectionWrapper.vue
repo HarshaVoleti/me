@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { trackPageView } from "../utils/supabase.js";
 
 defineProps({
   title: { type: String, required: true },
@@ -13,6 +14,7 @@ onMounted(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         isVisible.value = true;
+        trackPageView(sectionRef.value?.id ?? null);
         observer.disconnect();
       }
     },
