@@ -13,6 +13,7 @@ import { experience } from "../data/experience.js";
         :key="index"
         :title="job.role"
         :subtitle="`${job.company} · ${job.duration}`"
+        :teaser="job.bullets ? job.bullets.slice(0, 2) : []"
       >
         <p class="exp-description">{{ job.description }}</p>
 

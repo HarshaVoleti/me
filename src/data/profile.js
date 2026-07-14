@@ -12,7 +12,8 @@ export const profile = {
   },
   stats: [
     { value: "2.4 yrs", label: "Product Engineering" },
-    { value: "3K+", label: "App Users" },
-    { value: "2", label: "Apps on Both Stores" },
+    { value: "6K+", label: "App Users" },
+    { value: "3", label: "Apps on Both Stores" },
+    { value: "3", label: "Web apps deployed" },
   ],
 };

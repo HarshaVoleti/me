@@ -1,3 +1,10 @@
+import linkboxImage from "../assets/portfolio_images/linkbox/logo.png";
+import hangletImage from "../assets/portfolio_images/hanglet/logo.png";
+import tomorrowImage from "../assets/portfolio_images/tomorrow/thumbnail.png";
+import bewingzImage from "../assets/portfolio_images/bewingz/bewingz.png";
+import starWarsImage from "../assets/portfolio_images/star-wars-portfolio/home.png";
+import clientPortfolioImage from "../assets/portfolio_images/tomorrow/mecorp-dark.svg";
+
 export const projects = [
   {
     title: "LinkBox",
@@ -6,7 +13,7 @@ export const projects = [
     description:
       "Link organizer app — users build themed collections (tools, resources, products) and share them publicly. Built solo, from idea to both stores.",
     tech: ["Flutter", "Dart", "Riverpod", "Firestore", "Isar", "Firebase Cloud Messaging"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=LinkBox",
+    image: linkboxImage,
     links: [
       { label: "Website", url: "https://linkbox.store/" },
       { label: "App Store", url: "https://apps.apple.com/in/app/linkbox-create-collect-share/id6737998565" },
@@ -27,10 +34,11 @@ export const projects = [
     description:
       "Evening planning app — map out your next day the night before to wake up with clarity instead of friction. Solo-built, live on both stores.",
     tech: ["Flutter", "Dart", "Firebase"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Tomorrow",
+    image: tomorrowImage,
     links: [
-      // TODO: Add App Store link
-      // TODO: Add Play Store link
+      { label: "App Store", url: "https://apps.apple.com/in/app/tomorrow-plan-tonight/id6760284245" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=apps.me.tomorrow&hl=en_IN" },
+      { label: "Website", url: "https://me-corp.github.io/tomorrow-web/" },
     ],
     highlights: [
       "Solo-built and shipped to both App Store and Play Store",
@@ -43,15 +51,18 @@ export const projects = [
     featured: true,
     description:
       "Client project — hangout coordination app. Responsible for full mobile architecture and implementation. Confidential internals; architecture described below.",
-    tech: ["Flutter", "Dart", "Riverpod", "Supabase", "PostgreSQL", "FCM", "pgvector"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Hanglet",
+    tech: ["Flutter", "Dart", "Riverpod", "Supabase", "PostgreSQL", "FCM", "pgvector", "Google Maps", "Google Places API", "OpenStreetMap"],
+    image: hangletImage,
     links: [
-      // TODO: Add Play Store link if public
+      { label: "Website", url: "https://hanglet.com/" },
+      { label: "Play Store (Testing)", url: "https://play.google.com/apps/testing/com.hanglet.hanglet" },
     ],
     highlights: [
       "Push notification architecture: FCM tokens, Supabase Edge Functions for triggers, pg_cron for scheduled batch delivery",
       "Normalized Riverpod entity-store architecture across the full app — single source of truth for each domain entity",
       "Face verification using pgvector similarity search on stored facial embeddings",
+      "Dual map-provider integration (Google Maps + OpenStreetMap) with custom markers for browsing nearby hanglets on a live map view",
+      "Google Places API-powered location search with autocomplete for picking a venue when creating an activity",
       "Supabase RLS security audit across all tables; resolved policy gaps before Play Store submission",
     ],
   },
@@ -64,7 +75,7 @@ export const projects = [
     tech: ["zsh", "Shell Scripting", "CLI"],
     image: "https://placehold.co/600x340/1a1a2e/ffffff?text=devclean",
     links: [
-      // TODO: Add GitHub link (mac-dev-handbook repo)
+      { label: "GitHub", url: "https://github.com/HarshaVoleti/mac-dev-handbook" },
     ],
     highlights: [
       "Part of mac-dev-handbook — an opinionated toolkit for dev machine hygiene",
@@ -79,7 +90,8 @@ export const projects = [
     description:
       "A CRM platform developed at DeltaX designed to manage leads, customer relationships, and business interactions across both B2B and B2C workflows. Contributed to backend development by building and maintaining REST APIs and database logic that power the system, supporting Flutter-based mobile applications and Vue.js web clients. Deployed using containerized infrastructure.",
     tech: ["Flutter", "Vue.js", ".NET", "SQL Server", "REST APIs", "Docker", "Kubernetes", "Redis"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Birdigo",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/f2/54/05f2547c-2c0e-926e-d0ad-2447cef94b3d/Placeholder.mill/400x400bb-75.webp",
     links: [
       { label: "Website", url: "https://birdigo.com/" },
       { label: "Web App", url: "https://app.birdigo.com/" },
@@ -87,25 +99,25 @@ export const projects = [
       { label: "Android", url: "https://play.google.com/store/search?q=birdigo&c=apps&hl=en_IN" },
     ],
   },
-  {
-    title: "RateMe",
-    category: "app",
-    featured: false,
-    description:
-      "A social rating and review system focused on trust and transparency. Unlike social media, it lets users share constructive feedback on skills and character, evolving into a credibility-driven platform where reputation matters more than followers.",
-    tech: ["Flutter", "Firebase", "Firestore", "Firebase Authentication", "Firebase Cloud Messaging"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=RateMe",
-    links: [],
-  },
+  // {
+  //   title: "RateMe",
+  //   category: "app",
+  //   featured: false,
+  //   description:
+  //     "A social rating and review system focused on trust and transparency. Unlike social media, it lets users share constructive feedback on skills and character, evolving into a credibility-driven platform where reputation matters more than followers.",
+  //   tech: ["Flutter", "Firebase", "Firestore", "Firebase Authentication", "Firebase Cloud Messaging"],
+  //   image: "https://placehold.co/600x340/1a1a2e/ffffff?text=RateMe",
+  //   links: [],
+  // },
   {
     title: "Bewingz",
     category: "work",
     featured: false,
     description:
-      "A mobile application for tracking bike status, maintenance schedules, and service history.",
+      "A mobile application for tracking bike status, maintenance schedules, service history and check insights of your Bewingz e-bike.",
     tech: ["Flutter", "Firebase", "Firestore", "Firebase Authentication", "Firebase Cloud Messaging", "Firebase Storage", "Realtime Database"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Bewingz",
-    links: [],
+    image: bewingzImage,
+    links: [{ label: "Website", url: "https://bewingz.com/" }],
   },
   {
     title: "Client Portfolio Websites",
@@ -114,7 +126,7 @@ export const projects = [
     description:
       "Designed and developed personal portfolio websites for freelance clients to showcase their professional profiles, skills, and work experience with clean, modern layouts.",
     tech: ["Vue.js", "HTML", "CSS", "Netlify"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Client+Portfolios",
+    image: clientPortfolioImage,
     links: [
       { label: "Nikitha Pulineni", url: "https://nikithapulineni.netlify.app/" },
       { label: "Pareena Sayyad", url: "https://pareenasayyad.netlify.app/" },
@@ -133,7 +145,7 @@ export const projects = [
     description:
       "A creative animated personal portfolio inspired by the Star Wars universe. Designed as an experimental UI project combining animations, themed visuals, and interactive effects.",
     tech: ["Vue 3", "JavaScript", "CSS Animations"],
-    image: "https://placehold.co/600x340/1a1a2e/ffffff?text=Star+Wars+Portfolio",
+    image: starWarsImage,
     links: [
       { label: "Website", url: "https://masterharshavoleti.netlify.app/" },
     ],

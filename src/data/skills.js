@@ -5,11 +5,11 @@ export const skills = [
   },
   {
     category: "Mobile",
-    items: ["Flutter", "Dart", "Riverpod", "Firebase"],
+    items: ["Flutter", "Dart", "Riverpod", "Firebase", "Google Maps / Places API", "Geocoding"],
   },
   {
     category: "Web",
-    items: ["Vue.js", "JavaScript", "CSS", "REST APIs"],
+    items: ["Vue.js", "JavaScript", "CSS", "REST APIs", "React JS"],
   },
   {
     category: "Infra",

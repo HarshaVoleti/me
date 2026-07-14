@@ -4,6 +4,7 @@ import { ref, nextTick } from "vue";
 const props = defineProps({
   title: { type: String, required: true },
   subtitle: { type: String, default: "" },
+  teaser: { type: Array, default: () => [] },
 });
 
 const isOpen = ref(false);
@@ -33,6 +34,9 @@ async function toggle() {
       <div class="accordion-title">
         <strong>{{ title }}</strong>
         <span v-if="subtitle" class="accordion-subtitle">{{ subtitle }}</span>
+        <ul v-if="teaser.length" class="accordion-teaser">
+          <li v-for="(item, i) in teaser" :key="i">{{ item }}</li>
+        </ul>
       </div>
       <span class="accordion-icon" :class="{ rotated: isOpen }">+</span>
     </button>
@@ -87,6 +91,32 @@ async function toggle() {
   font-size: 0.85rem;
   color: var(--color-text-secondary);
   font-weight: 400;
+}
+
+.accordion-teaser {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.accordion-teaser li {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  padding-left: 0.9rem;
+  position: relative;
+  opacity: 0.85;
+}
+
+.accordion-teaser li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  font-size: 0.7rem;
+  opacity: 0.6;
 }
 
 .accordion-icon {
