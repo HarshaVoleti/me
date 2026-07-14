@@ -41,6 +41,9 @@ async function handleSubmit() {
         <a :href="profile.social.github" target="_blank" rel="noopener noreferrer" class="contact-link">
           GitHub
         </a>
+         <a :href="profile.social.topmate" target="_blank" rel="noopener noreferrer" class="contact-link">
+          Top Mate
+        </a>
       </div>
 
       <form class="contact-form" @submit.prevent="handleSubmit" novalidate>
