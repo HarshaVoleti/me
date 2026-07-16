@@ -20,3 +20,24 @@ export async function submitContact({ name, email, message }) {
     .insert({ ...getVisitorContext(), name, email, message });
   if (error) throw error;
 }
+
+export async function getPublishedPosts() {
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, title, summary, tags, published_at")
+    .eq("published", true)
+    .order("published_at", { ascending: false });
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function getPostBySlug(slug) {
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, title, summary, tags, content_md, published_at")
+    .eq("slug", slug)
+    .eq("published", true)
+    .maybeSingle();
+  if (error) throw error;
+  return data;
+}

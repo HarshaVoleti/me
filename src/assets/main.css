@@ -12,6 +12,15 @@
   --color-border-hover: #9ca3af;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+
+  /* Code block syntax token colors (blog post rendering) */
+  --code-bg: #f6f8fa;
+  --code-keyword: #cf222e;
+  --code-string: #0a3069;
+  --code-comment: #6b7280;
+  --code-function: #8250df;
+  --code-number: #0550ae;
+  --code-attr: #953800;
 }
 
 [data-theme="dark"] {
@@ -21,6 +30,14 @@
   --color-text-secondary: #8b949e;
   --color-border: #30363d;
   --color-border-hover: #58606a;
+
+  --code-bg: #161b22;
+  --code-keyword: #ff7b72;
+  --code-string: #a5d6ff;
+  --code-comment: #8b949e;
+  --code-function: #d2a8ff;
+  --code-number: #79c0ff;
+  --code-attr: #ffa657;
 }
 
 /* ========================================

@@ -47,7 +47,7 @@ onMounted(() => {
 <template>
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="#hero" class="navbar-brand" @click.prevent="onBrandClick">HV.</a>
+      <router-link to="/" class="navbar-brand" @click="onBrandClick">HV.</router-link>
 
       <button
         class="mobile-toggle"
@@ -58,15 +58,15 @@ onMounted(() => {
       </button>
 
       <div class="navbar-links" :class="{ open: mobileOpen }">
-        <a
+        <router-link
           v-for="link in navLinks"
-          :key="link.href"
-          :href="link.href"
+          :key="link.to"
+          :to="link.to"
           class="nav-link"
           @click="closeMobile"
         >
           {{ link.label }}
-        </a>
+        </router-link>
         <button class="theme-btn" @click="toggleTheme" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
           {{ isDark ? "☀️" : "🌙" }}
         </button>
