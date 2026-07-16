@@ -1,9 +1,10 @@
 export const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/#hero" },
+  { label: "Skills", to: "/#skills" },
+  { label: "Experience", to: "/#experience" },
+  { label: "Projects", to: "/#projects" },
+  { label: "Achievements", to: "/#achievements" },
+  { label: "Education", to: "/#education" },
+  { label: "Blogs", to: "/blogs" },
+  { label: "Contact", to: "/#contact" },
 ];
