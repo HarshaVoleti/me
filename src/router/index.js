@@ -13,13 +13,13 @@ const router = createRouter({
       meta: { title: DEFAULT_TITLE },
     },
     {
-      path: "/blog",
+      path: "/blogs",
       name: "blog-list",
       component: () => import("../views/BlogListView.vue"),
       meta: { title: "Blog — Harsha Voleti" },
     },
     {
-      path: "/blog/:slug",
+      path: "/blogs/:slug",
       name: "blog-detail",
       component: () => import("../views/BlogDetailView.vue"),
       // document title is set dynamically once the post loads

@@ -5,6 +5,6 @@ export const navLinks = [
   { label: "Projects", to: "/#projects" },
   { label: "Achievements", to: "/#achievements" },
   { label: "Education", to: "/#education" },
-  { label: "Blogs", to: "/blog" },
+  { label: "Blogs", to: "/blogs" },
   { label: "Contact", to: "/#contact" },
 ];

@@ -68,7 +68,7 @@ watch(
     <p v-if="loading" class="state-text">Loading…</p>
     <p v-else-if="notFound" class="state-text">
       Post not found. It may have been unpublished, or the link is wrong.
-      <router-link to="/blog" class="back-link">Back to blog</router-link>
+      <router-link to="/blogs" class="back-link">Back to blog</router-link>
     </p>
     <p v-else-if="error" class="state-text error">{{ error }}</p>
 

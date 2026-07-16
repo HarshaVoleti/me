@@ -39,7 +39,7 @@ onMounted(load);
 
     <ul v-else class="post-list">
       <li v-for="post in posts" :key="post.slug" class="post-item">
-        <router-link :to="`/blog/${post.slug}`" class="post-link">
+        <router-link :to="`/blogs/${post.slug}`" class="post-link">
           <h3 class="post-title">{{ post.title }}</h3>
           <time class="post-date" :datetime="post.published_at">{{ formatDate(post.published_at) }}</time>
           <p class="post-summary">{{ post.summary }}</p>
