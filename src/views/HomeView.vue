@@ -5,6 +5,7 @@ import ExperienceSection from "../sections/ExperienceSection.vue";
 import ProjectsSection from "../sections/ProjectsSection.vue";
 import AchievementsSection from "../sections/AchievementsSection.vue";
 import EducationSection from "../sections/EducationSection.vue";
+import CertificationsSection from "../sections/CertificationsSection.vue";
 import BlogPreviewSection from "../sections/BlogPreviewSection.vue";
 import ContactSection from "../sections/ContactSection.vue";
 </script>
@@ -17,6 +18,7 @@ import ContactSection from "../sections/ContactSection.vue";
     <ProjectsSection />
     <AchievementsSection />
     <EducationSection />
+    <CertificationsSection />
     <BlogPreviewSection />
     <ContactSection />
   </main>
